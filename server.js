@@ -24,12 +24,12 @@ app.use((request, response, next) => {
     next();
 
 });
-console.log("error");
 
-app.use((request, response, next) => {
-    response.render('maintenance.hbs');
-    next();
-});
+
+// app.use((request, response, next) => {
+//     response.render('maintenance.hbs');
+//     next();
+// });
 
 app.set('view engine', 'hbs');
 app.use(express.static(__dirname + '/public'));
@@ -71,8 +71,8 @@ app.get('/404', (request, response) => {
     })
 });
 
-app.listen(8080, () => {
-    console.log('Server is up on the port 8080');
-});
+// app.listen(8080, () => {
+//     console.log('Server is up on the port 8080');
+// });
 
 
